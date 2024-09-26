@@ -6,10 +6,10 @@ mydb = client["PersonalProjects"]
 mycollection = mydb["interactions"]
 
 
-mycollection.create_index([("Drug_A", pymongo.ASCENDING), ("Drug_B", pymongo.ASCENDING)], name="interaction_index")
+#mycollection.create_index([("Drug_A", pymongo.ASCENDING), ("Drug_B", pymongo.ASCENDING)], name="interaction_index")
 
 import pandas as pd
-data = pd.read_csv("D:/Projects/ddinter-main/ddinterpy/ddinter_downloads_code_A.csv")
+data = pd.read_csv("D:/Projects/ddinter-main/ddinterpy/ddinter_downloads_code_V.csv")
 data_dict = data.to_dict(orient="records")
 
 mycollection.insert_many(data_dict)
